@@ -1,0 +1,22 @@
+# Maintainer: Aren <aren@peacevolution.org>
+# Contributor: dni <office@dnilabs.com>
+
+pkgname=danctnix-hyprmo-settings
+pkgver=20240604
+pkgrel=1
+pkgdesc="Configuration files for HYPRMO"
+url="https://sr.ht/~mil/Sxmo/"
+arch=('any')
+license=('MIT')
+depends=('modemmanager' 'bluez' 'sxmo-utils' 'tinydm')
+install="$pkgname.install"
+source=('hyprmo-qt-mobile-controls.sh')
+sha512sums=('SKIP')
+
+pkgver() {
+    date +%Y%m%d
+}
+
+package() {
+    install -Dm755 -t "$pkgdir/etc/profile.d/" hyprmo-qt-mobile-controls.sh
+}
