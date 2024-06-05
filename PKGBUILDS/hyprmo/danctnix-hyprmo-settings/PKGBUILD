@@ -9,6 +9,7 @@ url="https://sr.ht/~mil/Sxmo/"
 arch=('any')
 license=('MIT')
 depends=('modemmanager' 'bluez' 'sxmo-utils' 'tinydm')
+replaces=('danctnix0sxmo-settings')
 install="$pkgname.install"
 source=('hyprmo-qt-mobile-controls.sh')
 sha512sums=('SKIP')
